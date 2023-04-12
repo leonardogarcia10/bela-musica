@@ -3,6 +3,8 @@ projeto de criação de um site de uma loja musical fictício, implementando em 
 
 link figma wireframes: https://www.figma.com/file/ng9aUuNZBfrd6dQaN1PGkm/Projeto-Bela-Music-%2F-Leonardo-Garcia?node-id=0-1&t=nncggYncNUdnAupA-0
 
+
+CHECKLIST REQUISITOS ✔️ / ❌
 . Caixas de Diálogo
  - prompt
  - alert

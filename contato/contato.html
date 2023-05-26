@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="contato.js"></script>
     <title>Contato</title>
 </head>
 
@@ -49,40 +50,47 @@
         </nav>
  
         <main class="flex-fill">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <form class="col-sm-10 col-md-8 col-lg-6">
-                        <h1>Entre em Contato</h1>
+            <div onmousewheel="novo()" class="container">
+              <div class="row justify-content-center">
+                <form id="Meuformulario" class="col-sm-10 col-md-8 col-lg-6" onsubmit="return validarFormulario()">
+                  <h1>Entre em Contato</h1>
+                  <p id="txtNovo" onmousewheel="novo()">Preste atenção ao inserir seus dados</p>
+                  <div class="form-floating mb-3">
+                    <input type="text" id="txtNomeCompleto" class="form-control" placeholder=" " autofocus required>
+                    <label for="txtNomeCompleto">Nome Completo</label>
+                  </div>
+          
+                  <div class="form-floating mb-3">
+                    <input type="email" id="txtEmail" class="form-control" placeholder=" " required>
+                    <label for="txtEmail">E-mail</label>
+                  </div>
+          
+                  <div class="form-floating mb-3">
+                    <textarea id="txtMensagem" class="form-control" placeholder=" " style="height: 200px;" required></textarea>
+                    <label for="txtMensagem">Mensagem</label>
+                  </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="text" id="txtNomeCompleto" class="form-control" placeholder=" " autofocus>
-                            <label for="txtNomeCompleto">Nome Completo</label>
-                        </div>
-                        
-                        <div class="form-floating mb-3">
-                            <input type="email" id="txtEmail" class="form-control" placeholder=" ">
-                            <label for="txtEmail">E-mail</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <textarea id="txtMensagem" class="form-control" placeholder=" " style="height: 200px;"></textarea>
-                            <label for="txtMensagem">Mensagem</label>
-                        </div>
-
-                        <button type="button" onclick="window.location.href='#'" class="btn btn-lg btn-warning">Enviar Mensagem</button>
-
-                        <p class="mt-3">
-                            Faremos nosso melhor para responder sua mensagem em até 2 dias úteis.
-                        </p>
-
-                        <p class="mt-3">
-                            Atenciosamente,<br>
-                            Central de Relacionamento BelaMusic
-                        </p>
-                    </form>
-                </div>
+                  <div class="form-floating mb-3">
+                    <select id="txtPreferencia" onchange="preferencia()" class="form-select">
+                      <option id="op1" value="email">Receber resposta por e-mail</option>
+                      <option id="op2" value="celular">Receber resposta por celular</option>
+                    </select>
+                    <label for="txtPreferencia">Preferência de Contato</label>
+                  </div>
+          
+                  <button type="submit" class="btn btn-lg btn-warning">Enviar Mensagem</button>
+                </form>
+                  <p class="mt-3">
+                    Faremos nosso melhor para responder sua mensagem em até 2 dias úteis.
+                  </p>
+          
+                  <p class="mt-3">
+                    Atenciosamente,<br>
+                    Central de Relacionamento BelaMusic
+                  </p>
+              </div>
             </div>
-        </main>
+          </main>
 
         <footer class="border-top text-muted bg-light">
             <div class="container">

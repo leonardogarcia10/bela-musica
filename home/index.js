@@ -1,3 +1,4 @@
+"use strict";
 //depois de 10 segundos, pergunta se quer receber notificações e promoções
 
 setTimeout(function () {
@@ -7,3 +8,16 @@ setTimeout(function () {
         alert("Você pode se inscrever a qualquer momento");
     }
 }, 10000);
+
+const p1 = document.getElementById('produto1');
+
+p1.addEventListener('mouseover', botão);
+p1.addEventListener('mouseout', sair);
+
+function botão() {
+    p1.style.backgroundColor = "#FE4C4C"
+}
+
+function sair() {
+    p1.style.backgroundColor = "#FFC107"
+}

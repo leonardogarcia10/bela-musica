@@ -5,14 +5,15 @@ link figma wireframes: https://www.figma.com/file/ng9aUuNZBfrd6dQaN1PGkm/Projeto
 
 
 CHECKLIST REQUISITOS ✔️ / ❌
+
 . Caixas de Diálogo
- - prompt
- - alert
- - confirm
+ - prompt ✔️
+ - alert ✔️
+ - confirm ✔️
 
 . Temporizadores
  - setInterval
- - setTimeout
+ - setTimeout ✔️
 
 . Funções
  - Função anônima com argumento
@@ -33,7 +34,7 @@ CHECKLIST REQUISITOS ✔️ / ❌
 
 . Acesso aos elementos DOM do HTML
  - Via referência DOM pelo id do elemento HTML - acesso sem uso do getElementByID ou querySelector, o id do objeto DOM é o próprio nome da variável
- - Via getElementByID()
+ - Via getElementByID() ✔️
  - Via getElementsByName()
  - Via getElementsByTagName()
  - Via seletores CSS usados na função querySelector() ou querySelectorAll()

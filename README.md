@@ -72,9 +72,9 @@ CHECKLIST REQUISITOS ✔️ / ❌
 . Formulário
  - Validação de formulário com onsubmit usando os métodos tradicionais - é a fase executada após a validação via HTML5 ✔️
  - Validação de formulário com HTML5 API
- - Customizar as mensagens nos balões de mensagem
- - Usar os atributos de validação dos inputs - required ou type="email" ou outros
- - Usar expressões regulares para validação - usar no atributo pattern do respectivo input
+    Customizar as mensagens nos balões de mensagem
+    Usar os atributos de validação dos inputs - required ou type="email" ou outros
+    Usar expressões regulares para validação - usar no atributo pattern do respectivo input
  - Ler e escrever em elementos input com a propriedade value ✔️
  - Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent ✔️
  - Manipulação de elemento de listagem, como checkbox, radio ou select ✔️ 

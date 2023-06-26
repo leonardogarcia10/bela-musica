@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>BelaMusic - Itens</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="contato.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <title>Contato</title>
 </head>
 
 <body>
@@ -47,75 +50,53 @@
                 </div>
             </div>
         </nav>
-
+ 
         <main class="flex-fill">
-            <div class="container">
-                <h1>Confira os Itens</h1>
-                <h3>Confira os itens e clique em <b>Continuar</b> para prosseguir para a <b>seleção do endereço de entrega</b>.</h3>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item py-3">
-                        <div class="row g-3">
-                            <div class="col-4 col-md-3 col-lg-2">
-                                <a href="#">
-                                    <img src="../img_home/microfone.jpg" class="img-thumbnail">
-                                </a>
-                            </div>
-                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                                <h4>
-                                    <b><a href="#" class="text-decoration-none text-black">
-                                            Microfone</a></b>
-                                </h4>
-                                <h5>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi architecto repellendus eligendi asperiores culpa! Magni eaque asperiores consequuntur mollitia, ipsum necessitatibus nulla amet voluptatibus modi eum sunt ipsa alias expedita.
-                                    <br>
-                                    <b>
-                                        1 unidade(s) <br>
-                                        R$ 99,00
-                                    </b>
-                                </h5>
-                            </div>                            
-                        </div>
-                    </li>
-                    <li class="list-group-item py-3">
-                        <div class="row g-3">
-                            <div class="col-4 col-md-3 col-lg-2">
-                                <a href="#">
-                                    <img src="../img_home/bateria.jpg" class="img-thumbnail">
-                                </a>
-                            </div>
-                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
-                                <h4>
-                                    <b><a href="#" class="text-decoration-none text-black">
-                                            Bateria</a></b>
-                                </h4>
-                                <h5>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis autem laboriosam perspiciatis eaque esse ratione explicabo beatae aliquam maxime quod a error atque magnam hic obcaecati ad modi, molestiae exercitationem. <br>
-                                    <b>
-                                        2 unidade(s) <br>
-                                        R$ 1471,00
-                                    </b>
-                                </h5>
-                            </div>                            
-                                        
-        
-                    </li>
-                    <li class="list-group-item py-3">
-                    </li>
-                    <li class="list-group-item pt-3 pb-0">
-                        <div class="text-end">
-                            <h4 class="text-dark mb-3">
-                                Valor Total: R$ 1571,00
-                            </h4>
-                            <a href="../carrinho/carrinho.html" class="btn btn-outline-success btn-lg mb-3">
-                                Voltar ao Carrinho
-                            </a>
-                            <a href="../endereço/endereço.html" class="btn btn-danger btn-lg ms-2 mb-3">Continuar</a>
-                        </div>
-                    </li>
-                </ul>
+            <div onmousewheel="novo()" class="container">
+              <div class="row justify-content-center">
+                <form id="Meuformulario" class="col-sm-10 col-md-8 col-lg-6" onsubmit="return validarFormulario()">
+                  <h1>Entre em Contato</h1>
+                  <p id="txtNovo" onmousewheel="novo()">Preste atenção ao inserir seus dados</p>
+                  <div class="form-floating mb-3">
+                    <input type="text" id="txtNomeCompleto" class="form-control" placeholder=" " autofocus required>
+                    <label for="txtNomeCompleto">Nome Completo</label>
+                  </div>
+          
+                  <div class="form-floating mb-3">
+                    <input type="email" id="txtEmail" class="form-control" placeholder=" " required>
+                    <label for="txtEmail">E-mail</label>
+                  </div>
+          
+                  <div class="form-floating mb-3">
+                    <input id="txtTelefone" class="form-control" placeholder=" " required>
+                    <label for="txtTelefone">Telefone</label>
+                  </div>
+                  <script>
+                    $("#txtTelefone").mask('0000-0000');
+                  </script>
+
+                  <div class="form-floating mb-3">
+                    <select id="txtPreferencia" onchange="preferencia()" class="form-select">
+                      <option id="op1" value="email">Receber resposta por e-mail</option>
+                      <option id="op2" value="celular">Receber resposta por celular</option>
+                    </select>
+                    <label for="txtPreferencia">Preferência de Contato</label>
+                  </div>
+          
+                  <button type="submit" class="btn btn-lg btn-warning">Enviar Mensagem</button>
+                </form>
+                  <p class="mt-3">
+                    Faremos nosso melhor para responder sua mensagem em até 2 dias úteis.
+                  </p>
+          
+                  <p class="mt-3">
+                    Atenciosamente,<br>
+                    Central de Relacionamento BelaMusic
+                  </p>
+              </div>
             </div>
-        </main>
-        
+          </main>
+
         <footer class="border-top text-muted bg-light">
             <div class="container">
                 <div class="row py-3">
@@ -153,8 +134,39 @@
             </div>
         </footer>
     </div>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function criarCookie(nome, valor, expiracao) {
+            var dataExpiracao = "";
+
+            if (expiracao) {
+                var data = new Date();
+                data.setTime(data.getTime() + (expiracao * 24 * 60 * 60 * 1000));
+                dataExpiracao = "; expires=" + data.toUTCString();
+            }
+
+            document.cookie = nome + "=" + valor + dataExpiracao + "; path=/";
+        }
+
         
+        criarCookie("meuCookie", "123456", 7);
+
+        var cookies = document.cookie.split(";");
+
+        var cookieEncontrado = false;
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.indexOf("meuCookie=") === 0) {
+                cookieEncontrado = true;
+                break;
+            }
+        }
+
+        if (cookieEncontrado) {
+            console.log("O cookie foi criado com sucesso!");
+        } else {
+            console.log("Falha ao criar o cookie.");
+        }
+    </script>
 </body>
 
 </html>

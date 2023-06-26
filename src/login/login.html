@@ -4,12 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>Endereço</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>BelaMusic - Login</title>
 </head>
 
 <body>
@@ -50,54 +47,39 @@
                 </div>
             </div>
         </nav>
-
+ 
         <main class="flex-fill">
             <div class="container">
-                <h1>Selecione o Endereço de Entrega</h1>
-                <h3 class="mb-4">
-                    Selecione o endereço de entrega e clique em <b>Continuar</b> para prosseguir para a <b>seleção da
-                        forma de pagamento</b>.
-                </h3>
-                <div class="d-flex justify-content-around flex-wrap border rounded-top pt-4 px-3">
-                    <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" 
-                            autocomplete="off" id="end1">
-                        <label class="btn btn-outline-warning p-4 h-100 w-100" for="end1">
-                            <h3>
-                                <b class="text-dark">Minha Casa</b><br>
-                                <hr>
-                                <p class="text-black">Rua blá blá blá <br> 85045-740 casa branca </p>
-                            </h3>
-                        </label>
-                    </div>
-                    <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" 
-                            autocomplete="off" id="end2">
-                        <label class="btn btn-outline-warning p-4 h-100 w-100" for="end2">
-                            <h3>
-                                <b class="text-dark">Meu Trabalho</b><br>
-                                <hr>
-                                <p class="text-black">Rua blá blá blá <br> 85045-740 casa branca </p>
-                            </h3>
-                        </label>
-                    </div>
-                    <div class="mb-4 mx-2 flex-even">
-                        <input type="radio" class="btn-check" name="endereco" 
-                            autocomplete="off" id="end3">
-                        <label class="btn btn-outline-warning p-4 h-100 w-100" for="end3">
-                            <h3>
-                                <b class="text-dark">Casa da Mãe</b><br>
-                                <hr>
-                                <p class="text-black">Rua blá blá blá <br> 85045-740 casa branca </p>
-                            </h3>
-                        </label>
-                    </div>
-                </div>
-                <div class="text-end border border-top-0 rounded-bottom p-4 pb-0">                    
-                    <a href="../itens/itens.html" class="btn btn-outline-success btn-lg mb-4">
-                        Voltar aos Itens
-                    </a>
-                    <a href="../pagamento/pagamento.html" class="btn btn-danger btn-lg ms-2 mb-4">Continuar</a>
+                <div class="row justify-content-center">
+                    <form class="col-sm-10 col-md-8 col-lg-6">
+                        <h1>Identifique-se, por favor</h1>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" id="txtEmail" class="form-control" placeholder=" " onfocus="dentro()" onblur="fora()">
+                            <label for="txtEmail">E-mail</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" id="txtSenha" class="form-control" placeholder=" " onfocus="dentroS()" onblur="foraS()">
+                            <label for="txtSenha">Senha</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" value="" id="txtLembrar">
+                            <label  onclick="confirm('Seus dados serão salvos!')"for="txtLembrar" class="form-check-label">Lembrar de mim</label>
+                        </div>
+
+                        <button type="button" onclick="validarLogin()"
+                            class="btn btn-lg btn-warning">Entrar</button>
+
+                        <p class="mt-3">
+                            Ainda não é cadastrado? <a href="../cadastro/cadastro.html">Clique aqui</a> para se cadastrar.
+                        </p>
+
+                        <p class="mt-3">
+                            Esqueceu sua senha? <a href="../senha/recuperar-senha.html">Clique aqui</a> para recuperá-la.
+                        </p>
+                    </form>
                 </div>
             </div>
         </main>
@@ -143,3 +125,5 @@
 </body>
 
 </html>
+
+<script src="login.js"></script>

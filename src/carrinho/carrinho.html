@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <title>Carrinho de Compras</title>
 </head>
 
 <body>
-    <div class="d-flex flex-column wrapper">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-warning border-bottom shadow-sm mb-3">
+    <body style="min-width:372px;">
+        <div class="d-flex flex-column wrapper">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-warning border-bottom shadow-sm mb-3">
             <div class="container">
                 <a class="navbar-brand" href="../home/index.html"><b>BelaMusic</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,15 +31,15 @@
                     <div class="align-self-end">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="../cadastro/cadastro.html" class="nav-link text-white">Quero Me Cadastrar</a>
+                                <a href="../login/login.html" class="nav-link text-white">Quero Me Cadastrar</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../login/login.html" class="nav-link text-white">Entrar</a>
                             </li>
                             <li class="nav-item">
                                 <span class="badge rounded-pill bg-light text-black position-absolute ms-4 mt-0"
-                                    title="5 produto(s) no carrinho"><small>4</small></span>
-                                <a href="../carrinho/carrinho.html" class="nav-link text-white">
+                                    title="5 produto(s) no carrinho"><small>2</small></span>
+                                <a href="../itens-pedido/itens-pedido.html" class="nav-link text-white">
                                     <i class="bi-cart" style="font-size:24px;line-height:24px;"></i>
                                 </a>
                             </li>
@@ -56,7 +57,7 @@
                         <div class="row g-3">
                             <div class="col-4 col-md-3 col-lg-2">
                                 <a href="#">
-                                    <img src="../img_home/violao2.jpg" class="img-thumbnail">
+                                    <img src="/assets/resources/bateria.jpg" class="img-thumbnail">
                                 </a>
                             </div>
                             <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
@@ -92,7 +93,7 @@
                         <div class="row g-3">
                             <div class="col-4 col-md-3 col-lg-2">
                                 <a href="#">
-                                    <img src="../img_home/guitarra.jpg" class="img-thumbnail">
+                                    <img src="/assets/resources/microfone.jpg" class="img-thumbnail">
                                 </a>
                             </div>
                             <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
@@ -132,7 +133,7 @@
                             <a href="../home/index.html" class="btn btn-outline-success btn-lg">
                                 Continuar Comprando                            
                             </a>
-                            <a href="../itens/itens.html" class="btn btn-danger btn-lg ms-2 mt-xs-3">Fechar Compra</a>
+                            <a href="../itens-pedido/itens-pedido.html" class="btn btn-danger btn-lg ms-2 mt-xs-3">Fechar Compra</a>
                         </div>
                     </li>
                 </ul>
